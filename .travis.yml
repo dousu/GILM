@@ -1,0 +1,12 @@
+language: generic
+sudo: false
+matrix:
+  include:
+    - env:
+      - CXX=g++
+        DOC=dousu/docker_cpp_with_boost
+      install:
+        - docker pull $DOC
+script:
+  - docker run -w /tmp/MAILM -v $PWD:/tmp/MAILM -e CXX $DOC /bin/sh -c "$CXX -v && make -j test"
+

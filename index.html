@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="JAIST D2 JSPS Young Fellow DC1 Hiroki Sudo">
+  <meta name="dcterms.date" content="2018-11-10">
+  <title>Design for Music Iterated Learning</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p><img style="position:absolute;top:0px;left:0px;z-index:999;" src="assets/whiteKAKENHIlogoL_jp.jpg" width="240px"></p>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Design for Music Iterated Learning</h1>
+  <p class="author">JAIST Information Science D2<br>JSPS Young Fellow DC1<br>Hiroki Sudo</p>
+  <p class="date">Nov. 10, 2018</p>
+</section>
+
+<section id="model" class="slide">
+<h1>Model</h1>
+<img src="assets/model.png" width="1000px">
+</section>
+
+<section id="tool" class="slide">
+<h1>Application</h1>
+<div style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DsEYk9nancM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</section>
+
+<section id="procedure" class="slide">
+<section class="slide">
+<h1>Procedure</h1>
+<ol>
+	<li>Explain a purpose of our research and the procedure to participants</li>
+	<li>Let participants play the application to get used to it</li>
+	<li>Give a chance to ask questions about the application</li>
+	<li>Make a pair in participants, which is one teacher and one learner</li>
+</ol>
+</section>
+<section class="slide">
+<h1>Procedure</h1>
+<ol start="5">
+  <li>Give a each pair a generation number</li>
+  <li>Give 10 times of communication on the generation(One step is that a learner imitates parent's music and they switch roles.)</li>
+  <li>Give a record of communication next generation</li>
+</ol>
+</section>
+</section>
+
+<section class="slide">
+<section class="slide"><h1>Features</h1></section>
+<section class="slide">
+<h2 id="meaning-space">Meaning Space</h2>
+<ul>
+	<li>A whole scores, 300 kinds</li>
+  <li>The iteration constructs new meaning by human feeling and bias.</li>
+	<li>A learner must guess a meaning of a teacher's to imitate it because the learner could not always choise scores teacher selected.</li>
+</ul>
+</section>
+<section class="slide">
+<h2 id="learning-bottleneck">Learning Bottleneck</h2>
+<ul>
+	<li>A half of scores, 150 kinds</li>
+	<li>When a teacher and a learner make music, they are given 150 scores which is selected randomly.</li>
+	<li>The learner would not construct the same music as the teacher's one.</li>
+</ul>
+</section>
+<section class="slide">
+<h2 id="learning">Learning(Modification)</h2>
+<ul>
+	<li>9 times on the generation and record of a previous generation</li>
+	<li>A teacher could guess the learner's cognition what he/she focused on from the imitation.</li>
+	<li>Participants could refer the previous record, when making and imitating music.</li>
+</ul>
+</section>
+</section>
+
+<section id="hypothesis" class="slide">
+<h1>Hypothesis</h1>
+<ul>
+	<li>Pitch structure(similar keys, similar pitches and so on)?</li>
+	<li>Melodic pattern structure(a form based on difference between pitches)?</li>
+	<li>Is it explained by music theory?</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
